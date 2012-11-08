@@ -3,7 +3,7 @@ Veewee::Definition.declare({
   :memory_size=> '256',
   :disk_size => '10140', :disk_format => 'VDI', :hostiocache => 'on',
   :os_type_id => 'Debian_64',
-  :iso_file => "debian-wheezy-DI-b2-amd64-netinst.iso",
+  :iso_file => "debian-wheezy-DI-b3-amd64-netinst.iso",
   :iso_src => "http://cdimage.debian.org/cdimage/wheezy_di_beta3/amd64/iso-cd/debian-wheezy-DI-b3-amd64-netinst.iso",
   :iso_md5 => "e9f2479c43a623dd8b9c0bc95d8460ce",
   :iso_download_timeout => "1000",
