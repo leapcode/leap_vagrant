@@ -1,2 +1,0 @@
-# Install Ruby from packages
-
