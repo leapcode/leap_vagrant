@@ -14,13 +14,12 @@ Veewee::Definition.declare({
     'debian-installer=en_US ',
     'auto ',
     'locale=en_US ',
-    'kbd-chooser/method=us ',
+    'keyboard-configuration/xkb-keymap=us ',
     'netcfg/get_hostname=%NAME% ',
     'netcfg/get_domain=vagrantup.com ',
     'fb=false ',
     'debconf/frontend=noninteractive ',
     'console-setup/ask_detect=false ',
-    'console-keymaps-at/keymap=us ',
     '<Enter>'
   ],
   :kickstart_port => "7122",
@@ -38,7 +37,6 @@ Veewee::Definition.declare({
     "base.sh",
     "vagrant.sh",
     "virtualbox.sh",
-    "ruby.sh",
     "cleanup-virtualbox.sh",
     "cleanup.sh",
     "zerodisk.sh"
