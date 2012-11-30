@@ -1,3 +1,5 @@
+date > /etc/box_build_time
+
 # Update the box
 apt-get -y update
 apt-get -y install linux-headers-$(uname -r) build-essential
@@ -26,3 +28,4 @@ GRUB_CMDLINE_LINUX="debian-installer=en_US"
 EOF
 
 update-grub
+
