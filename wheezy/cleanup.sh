@@ -1,5 +1,6 @@
-# Clean up
-apt-get -y remove linux-headers-$(uname -r) build-essential
+# Clean up - we want to have linux headers and build-essential installed because
+# otherwise things break with kernel upgrades
+# apt-get -y remove linux-headers-$(uname -r) build-essential
 apt-get -y autoremove
 
 # Removing leftover leases and persistent rules
