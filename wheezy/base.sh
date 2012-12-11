@@ -1,7 +1,7 @@
 date > /etc/box_build_time
 
 # Before updating the box, get rid of pdiffs, they slow things down on faster links
-echo 'Acquire::PDiffs "false";' >./etc/apt/apt.conf.d/90disable-pdiffs
+echo 'Acquire::PDiffs "false";' >/etc/apt/apt.conf.d/90disable-pdiffs
 
 # Update the box
 apt-get -y update
