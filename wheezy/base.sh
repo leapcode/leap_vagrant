@@ -9,8 +9,8 @@ apt-get -y install linux-headers-amd64 build-essential
 apt-get -y install zlib1g-dev libssl-dev libreadline6-dev
 apt-get -y install curl unzip
 apt-get -y install virtualbox-guest-utils
-apt-get -y puppet ruby-hiera-puppet rsync lsb-release
-apt-get -y console-data
+apt-get -y install puppet ruby-hiera-puppet rsync lsb-release
+DEBIAN_FRONTEND=noninteractive apt-get -y install console-data
 apt-get -y dist-upgrade
 apt-get clean
 
