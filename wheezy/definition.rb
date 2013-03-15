@@ -11,8 +11,8 @@ Veewee::Definition.declare({
                                   ]
                           },
   :iso_file => "debian-6.0.6-i386-netinst.iso",
-  :iso_src => "http://cdimage.debian.org/debian-cd/6.0.6/i386/iso-cd/debian-6.0.6-i386-netinst.iso",
-  :iso_md5 => "a5fdc1b74cd573d505a084baf7cc1462",
+  :iso_src => "http://cdimage.debian.org/cdimage/wheezy_di_beta4/i386/iso-cd/debian-wheezy-DI-b4-i386-netinst.iso",
+  :iso_md5 => "34d0ae973715c7a31646281c70839809",
   :iso_download_timeout => "1000",
   :boot_wait => "10", :boot_cmd_sequence => [
      '<Esc>',
