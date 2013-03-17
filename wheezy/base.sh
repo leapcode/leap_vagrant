@@ -5,7 +5,7 @@ echo 'Acquire::PDiffs "false";' >/etc/apt/apt.conf.d/90disable-pdiffs
 
 # Update the box
 apt-get -y update
-apt-get -y install linux-headers-generic build-essential
+apt-get -y install linux-headers-$(uname -r) build-essential
 apt-get -y install zlib1g-dev libssl-dev libreadline6-dev
 apt-get -y install curl unzip
 apt-get -y install virtualbox-guest-utils
