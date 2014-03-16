@@ -37,7 +37,6 @@ Veewee::Definition.declare({
     "base.sh",
     "vagrant.sh",
     "virtualbox.sh",
-    "cleanup-virtualbox.sh",
     "cleanup.sh",
     "zerodisk.sh"
   ],
