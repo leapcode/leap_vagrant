@@ -10,7 +10,6 @@ if test -f .vbox_version ; then
   # Install dkms for dynamic compiles
 
   apt-get install -y dkms
-
   
   # If libdbus is not installed, virtualbox will not autostart
   apt-get -y install --no-install-recommends libdbus-1-3
@@ -18,8 +17,6 @@ if test -f .vbox_version ; then
   # Install the VirtualBox guest additions
   VBOX_VERSION=$(cat .vbox_version)
   VBOX_ISO=VBoxGuestAdditions_$VBOX_VERSION.iso
-  cd /tmp
-  wget http://download.virtualbox.org/virtualbox/$VBOX_VERSION/VBoxGuestAdditions_$VBOX_VERSION.iso 
   mount -o loop $VBOX_ISO /mnt
   yes|sh /mnt/VBoxLinuxAdditions.run
   umount /mnt
@@ -33,6 +30,6 @@ if test -f .vbox_version ; then
   # Test mount the veewee-validation
   mount -t vboxsf veewee-validation /tmp/veewee-validation
 
-  rm /tmp/$VBOX_ISO
+  rm $VBOX_ISO
 
 fi
