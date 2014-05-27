@@ -3,7 +3,7 @@ Veewee::Definition.declare({
   :memory_size=> '256',
   :disk_size => '10140', :disk_format => 'VDI', :hostiocache => 'on',
   :os_type_id => 'Debian_64',
-  :iso_file => "debian-7.0.0-amd64-netinst.iso",
+  :iso_file => "debian-7.4.0-amd64-netinst.iso",
   :iso_src => "http://cdimage.debian.org/cdimage/release/current/amd64/iso-cd/debian-7.4.0-amd64-netinst.iso",
   :iso_md5 => "e7e9433973f082a297793c3c5010b2c5",
   :iso_download_timeout => "1000",
@@ -37,7 +37,6 @@ Veewee::Definition.declare({
     "base.sh",
     "vagrant.sh",
     "virtualbox.sh",
-    "cleanup-virtualbox.sh",
     "cleanup.sh",
     "zerodisk.sh"
   ],
