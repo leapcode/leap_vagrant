@@ -10,3 +10,9 @@ time the system was built.
 
 Since GitHub retired its downloads area, you will now have to find baseboxes
 built from these definitions at [LEAP](http://download.leap.se/).
+
+If you want to build a box yourself, you first need to install veewee and it's
+dependencies. You can either add our wheezy definitions to the templates or
+veewee <provider> define 'leap' 'git://leap.se/leap_vagrant.git
+Building should be straightforward: veewee <provider> build 'leap'
+Check out veewees documentation for all the options.
