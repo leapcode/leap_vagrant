@@ -13,7 +13,7 @@ Veewee::Definition.declare({
     'preseed/url=http://%IP%:%PORT%/preseed.cfg ',
     'debian-installer=en_US ',
     'auto ',
-    'locale=en_US ',
+    'locale=en_US.UTF-8 ',
     'keyboard-configuration/xkb-keymap=us ',
     'netcfg/get_hostname=%NAME% ',
     'netcfg/get_domain=vagrantup.com ',
