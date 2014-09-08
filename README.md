@@ -1,4 +1,7 @@
-This repository contains Debian vagrant definitions to get started with
+About
+=====
+
+This repository contains Debian vagrant basebox definitions to get started with
 [LEAP](https://leap.se).
 
 That means a base Wheezy installation, with puppet, ruby, virtualbox guest
@@ -8,11 +11,47 @@ The installer used is the latest version of the installer and after the system
 has been installed, the packages have been updated to the latest version at the
 time the system was built. 
 
+
+Download pre-built baseboxes
+============================
+
 Since GitHub retired its downloads area, you will now have to find baseboxes
 built from these definitions at [LEAP](http://download.leap.se/).
+You'll find Debian Wheezy baseboxes for Virtualbox and KVM.
 
-If you want to build a box yourself, you first need to install veewee and it's
-dependencies. You can either add our wheezy definitions to the templates or
-veewee <provider> define 'leap' 'git://leap.se/leap_vagrant.git
-Building should be straightforward: veewee <provider> build 'leap'
+
+Build basebox yourself
+======================
+
+If you want to build a box yourself, you first need to install 
+[veewee](https://github.com/jedi4ever/veewee) and it's
+dependencies.
+You can either add our wheezy definitions to the templates or
+
+    veewee <provider> define 'leap' 'git://leap.se/leap_vagrant.git
+
+Building should be straightforward:
+
+    veewee <provider> build 'leap'
+
 Check out veewees documentation for all the options.
+
+Debian Jessie Beta1
+===================
+
+    veewee <provider> define Debian-jessie.beta1-amd64-netboot Debian-jessie.beta1-amd64-netboot
+    veewee <provider> build  Debian-jessie.beta1-amd64-netboot
+
+Issues
+======
+
+* Debian Jessie Beta1 bloats up to size 1,5GB atm
+* Interaction is needed for following packages: 
+  * console-data
+  * grub2
+  * you need to kill the pager that shows you the apt-listchanges of a certain package (don't recall which) with
+
+
+      killall pager
+
+
