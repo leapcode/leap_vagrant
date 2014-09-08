@@ -39,12 +39,13 @@ Veewee::Definition.declare({
   :shutdown_cmd => "halt -p",
   :postinstall_files => [
     "base.sh",
+    "leap.sh",
     "vagrant.sh",
     "virtualbox.sh",
     #"vmfusion.sh",
-    "ruby.sh",
-    "puppet.sh",
-    "chef.sh",
+    #"ruby.sh",
+    #"puppet.sh",
+    #"chef.sh",
     "cleanup.sh",
     "zerodisk.sh"
   ],
