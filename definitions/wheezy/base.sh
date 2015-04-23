@@ -21,6 +21,10 @@ sed -i -e 's/%sudo.*ALL=(ALL:ALL) ALL/%sudo ALL=NOPASSWD:ALL/g' /etc/sudoers
 
 # Tweak sshd to prevent DNS resolution (speed up logins)
 echo 'UseDNS no' >> /etc/ssh/sshd_config
+# remove unsecure nist ecdsa keys
+sed -i /ecdsa/d' /etc/ssh/sshd_config
+# i'm hesitant to include openssh-server from backports for wheezy, so commented out for now
+# HostKey /etc/ssh/ssh_host_ed25519_key
 
 # Remove 5s grub timeout to speed up booting
 echo <<EOF > /etc/default/grub
