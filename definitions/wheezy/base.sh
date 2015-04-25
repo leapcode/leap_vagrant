@@ -11,6 +11,9 @@ apt-get -y install curl unzip
 # Debians virtualbox guest utilities are too old
 #apt-get -y install virtualbox-guest-utils
 apt-get -y install puppet ruby-hiera-puppet rsync lsb-release
+# Install additional packages to vagrant wheezy basebox to make beaker happy #6898
+apt-get -y install ntpdate git rdoc
+
 DEBIAN_FRONTEND=noninteractive apt-get -y install console-data
 apt-get -y dist-upgrade
 apt-get clean
