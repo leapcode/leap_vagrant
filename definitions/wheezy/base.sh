@@ -12,7 +12,6 @@ apt-get -y install ntpdate git rdoc
 
 DEBIAN_FRONTEND=noninteractive apt-get -y install console-data
 apt-get -y dist-upgrade
-apt-get clean
 
 # Set up sudo
 cp /etc/sudoers /etc/sudoers.orig

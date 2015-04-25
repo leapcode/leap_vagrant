@@ -2,6 +2,7 @@
 # otherwise things break with kernel upgrades
 # apt-get -y remove linux-headers-$(uname -r) build-essential
 apt-get -y autoremove
+apt-get clean
 
 # Removing leftover leases and persistent rules
 echo "cleaning up dhcp leases"
