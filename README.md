@@ -47,3 +47,4 @@ Issues
 ======
 
 * Libvirt images (KVM) are a lot larger as the Virtualbox ones (up to 1,5GB)
+  see https://github.com/jedi4ever/veewee/issues/929
