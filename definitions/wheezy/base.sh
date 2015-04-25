@@ -5,11 +5,7 @@ echo 'Acquire::PDiffs "false";' >/etc/apt/apt.conf.d/90disable-pdiffs
 
 # Update the box
 apt-get -y update
-apt-get -y install linux-headers-amd64 build-essential
-apt-get -y install zlib1g-dev libssl-dev libreadline6-dev
 apt-get -y install curl unzip
-# Debians virtualbox guest utilities are too old
-#apt-get -y install virtualbox-guest-utils
 apt-get -y install puppet ruby-hiera-puppet rsync lsb-release
 # Install additional packages to vagrant wheezy basebox to make beaker happy #6898
 apt-get -y install ntpdate git rdoc

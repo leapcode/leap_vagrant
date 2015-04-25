@@ -7,10 +7,13 @@ if test -f .vbox_version ; then
   rmmod vboxguest
   aptitude -y purge virtualbox-ose-guest-x11 virtualbox-ose-guest-dkms virtualbox-ose-guest-utils
 
-  # Install dkms for dynamic compiles
 
+  apt-get -y install linux-headers-amd64 build-essential
+  apt-get -y install zlib1g-dev libssl-dev libreadline6-dev
+
+  # Install dkms for dynamic compiles
   apt-get install -y dkms
-  
+
   # If libdbus is not installed, virtualbox will not autostart
   apt-get -y install --no-install-recommends libdbus-1-3
 
