@@ -30,21 +30,34 @@ dependencies.
 Building should be straightforward using our pre-defined leap-wheezy
 definitions:
 
-    veewee <provider> build 'wheezy'
-    veewee <provider> export 'wheezy'
+Debian wheezy amd64
+-------------------
+
+    veewee <provider> build  wheezy
+    veewee <provider> export wheezy
+
+To use it in Vagrant, use
+
+    vagrant box add LEAP/wheezy /home/varac/dev/projects/leap/git/leap_vagrant/wheezy.box
+
+
+Debian Jessie amd64
+-------------------
+
+    veewee <provider> build  jessie
+    veewee <provider> export jessie
+
+To use it in Vagrant, use
+
+    vagrant box add LEAP/jessie /home/varac/dev/projects/leap/git/leap_vagrant/jessie.box
+
+
 
 Check out veewees documentation for all the options.
-
-Debian Jessie Beta1
-===================
-
-Can be found in the debian-testing branch
-
-    veewee <provider> define Debian-jessie.beta1-amd64-netboot Debian-jessie.beta1-amd64-netboot
-    veewee <provider> build  Debian-jessie.beta1-amd64-netboot
 
 Issues
 ======
 
 * Libvirt images (KVM) are a lot larger as the Virtualbox ones (up to 1,5GB)
-  see https://github.com/jedi4ever/veewee/issues/929
+  see https://github.com/jedi4ever/veewee/issues/
+* jessie: you need to manually choose the boot device for grub
