@@ -15,10 +15,7 @@ time the system was built.
 Download pre-built baseboxes
 ============================
 
-Since GitHub retired its downloads area, you will now have to find baseboxes
-built from these definitions at [LEAP](http://download.leap.se/).
-You'll find Debian Wheezy baseboxes for Virtualbox and KVM.
-
+Hashicorp's Atlas makes both hosting and versioining of baseboxes straightforward. You can find the ones we build from these definitions at [LEAP's account:](https://atlas.hashicorp.com/LEAP). Wheezy is what we focus on now, Jessie needs some work. You'll find there baseboxes for Virtualbox and KVM (libvirt). Signed checksums are at (https://downloads.leap.se/platform/).
 
 Build basebox yourself
 ======================
@@ -60,4 +57,3 @@ Issues
 
 * Libvirt images (KVM) are a lot larger as the Virtualbox ones (up to 1,5GB)
   see https://github.com/jedi4ever/veewee/issues/
-* jessie: you need to manually choose the boot device for grub
