@@ -11,7 +11,6 @@ The installer used is the latest version of the installer and after the system
 has been installed, the packages have been updated to the latest version at the
 time the system was built.
 
-
 Download pre-built baseboxes
 ============================
 
@@ -48,12 +47,10 @@ To use it in Vagrant, use
 
     vagrant box add LEAP/jessie /home/varac/dev/projects/leap/git/leap_vagrant/jessie.box
 
-
-
 Check out veewees documentation for all the options.
 
 Issues
 ======
 
 * Libvirt images (KVM) are a lot larger as the Virtualbox ones (up to 1,5GB)
-  see https://github.com/jedi4ever/veewee/issues/
+  see https://github.com/jedi4ever/veewee/issues/929
