@@ -2,10 +2,14 @@
 apt-get -y update
 #apt-get -y install linux-headers-$(uname -r) build-essential
 #apt-get -y install zlib1g-dev libssl-dev libreadline-gplv2-dev
-apt-get -y install curl unzip
+apt-get -y install curl unzip vim tmux
 
 # Set up sudo
 echo 'vagrant ALL=(ALL) NOPASSWD: ALL' > /etc/sudoers.d/vagrant
+
+# jessie 
+sed -i 's/PermitRootLogin yes/PermitRootLogin no/' /etc/ssh/sshd_config 
+echo 'PasswordAuthentication no' >> /etc/ssh/sshd_config 
 
 # Tweak sshd to prevent DNS resolution (speed up logins)
 echo 'UseDNS no' >> /etc/ssh/sshd_config
