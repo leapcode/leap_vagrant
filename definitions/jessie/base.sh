@@ -7,13 +7,12 @@ apt-get -y install curl unzip vim tmux
 # Set up sudo
 echo 'vagrant ALL=(ALL) NOPASSWD: ALL' > /etc/sudoers.d/vagrant
 
-# LEAP still requires ssh-root login:
+# LEAP still requires ssh-root login Jessie:
 
 # Either create a root password OR a user with sudo rights in the preseed
 echo 'root:vagrant' | sudo chpasswd 
 
 echo 'PasswordAuthentication yes' >> /etc/ssh/sshd_config 
-#echo 'PermitRootLogin yes' >> /etc/ssh/sshd_config 
 sed -i 's/PermitRootLogin without-password/PermitRootLogin yes/' /etc/ssh/sshd_config 
 
 # Tweak sshd to prevent DNS resolution (speed up logins)
