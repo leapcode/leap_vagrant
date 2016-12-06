@@ -1,6 +1,10 @@
 About
 =====
 
+We're now using packer to build base boxes to get started, this repository is
+only for historical reasons, check out
+[packer_vagrant](https://leap.se/git/packer_vagrant.git) instead.
+
 This repository contains Debian vagrant basebox definitions to get started with
 [LEAP](https://leap.se).
 
